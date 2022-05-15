@@ -63,7 +63,7 @@ func bottomToBottom(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnch
 func bottomToTop(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToTop, constant) }
 func bottomToTop(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToTop, relatedView, constant) }
 func bottomToSafeArea(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToSafeArea, constant) }
-func heightToConstant(_ constant: CGFloat = 0) -> QuickAnchor { Q(.heightEqualToConstant, constant) }
+public func heightToConstant(_ constant: CGFloat = 0) -> QuickAnchor { Q(.heightEqualToConstant, constant) }
 func heightToRelatedView(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.heightEqualToView, relatedView, constant) }
 func widthToConstant(_ constant: CGFloat = 0) -> QuickAnchor { Q(.widthEqualToConstant, constant) }
 func widthToRelatedView(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.widthEqualToView, relatedView, constant) }
@@ -141,7 +141,7 @@ extension UIView {
         if let anchors = quickAnchors { subview.activateQuickAnchors(anchors) }
     }
     
-    func quickAdd(_ subview: UIView, _ padding: Int? = 0) {
+    public func quickAdd(_ subview: UIView, _ padding: Int? = 0) {
         let constant: CGFloat = CGFloat(padding ?? 0)
         self.addSubview(subview)
         NSLayoutConstraint.activate([
@@ -152,7 +152,7 @@ extension UIView {
         ])
     }
     
-    func activateQuickAnchors(_ quickAnchors: [QuickAnchor]) {
+    public func activateQuickAnchors(_ quickAnchors: [QuickAnchor]) {
         let constraints = quickAnchors.map { a in constraint(a) }
         NSLayoutConstraint.activate(constraints)
     }
