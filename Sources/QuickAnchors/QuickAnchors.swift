@@ -9,7 +9,7 @@ import UIKit
 
 typealias Q = QuickAnchor
 
-struct QuickAnchor {
+public struct QuickAnchor {
     let type: QuickAnchorType
     let relatedView: UIView? //defaults to parent
     let constant: CGFloat? //defaults to 0
@@ -115,12 +115,12 @@ extension UIView {
         }
     }
     
-    func quickAdd(_ subview: UIView, _ quickAnchors: [QuickAnchor]) {
+    public func quickAdd(_ subview: UIView, _ quickAnchors: [QuickAnchor]) {
         self.addSubview(subview)
         subview.activateQuickAnchors(quickAnchors)
     }
     
-    func quickAdd(_ subview: UIView, _ padding: [Any?], _ quickAnchors: [QuickAnchor]? = nil) {
+    public func quickAdd(_ subview: UIView, _ padding: [Any?], _ quickAnchors: [QuickAnchor]? = nil) {
         guard padding.count == 4 else { fatalError() }
         
         self.addSubview(subview)
