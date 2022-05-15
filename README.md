@@ -304,7 +304,28 @@ blueView.quickAdd(redView,
 
 ### Prefer convenience initializers
 
-//todo
+Whenever possible, it is recommended to use convenience initializers for UIView subclasses in order to further increase brevity.
+
+Good convenience initialzers will let you take code like this:
+
+```swift
+let b = UIButton()
+b.translatesAutoresizingMaskIntoConstraints = false
+b.setTitle("Press Me", for: .normal)
+b.addTarget(self, action: #selector(handleButtonPress), for: .touchUpInside)
+view.quickAdd(b, 10)
+```
+
+and reduce it down to code like this:
+
+```swift
+let b = UIButton(title: "Press Me", target: self, action: #selector(handleButtonPress))
+view.quickAdd(b, 10)
+```
+
+Be smart about your convenience initializers. If you find yourself always creating UIViews and then setting a different background and corner radius, create a specialized initializer.
+
+To get you started, I have created a [gist of my favorite UIView subclass convenience initializers](https://gist.github.com/adamkaump/ed1b812ca8d3c22ce0f1f482e3d2ed0c).
 
 ### Minimize new lines
 
