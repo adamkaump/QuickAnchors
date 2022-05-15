@@ -47,30 +47,30 @@ enum QuickAnchorType {
  Global functions for creating quick anchors
  */
 
-func topToTop(_ constant: CGFloat = 0) -> QuickAnchor { Q(.topToTop, constant) }
-func topToTop(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.topToTop, relatedView, constant) }
-func topToSafeArea(_ constant: CGFloat = 0) -> QuickAnchor { Q(.topToSafeArea, constant) }
-func topToBottom(_ constant: CGFloat = 0) -> QuickAnchor { Q(.topToBottom, constant) }
-func topToBottom(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.topToBottom, relatedView, constant) }
-func leadingToLeading(_ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToLeading, constant) }
-func leadingToLeading(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToLeading, relatedView, constant) }
-func leadingToTrailing(_ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToTrailing, constant) }
-func leadingToTrailing(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToTrailing, relatedView, constant) }
-func trailingToTrailing(_ constant: CGFloat = 0) -> QuickAnchor { Q(.trailingToTrailing, constant) }
-func trailingToTrailing(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.trailingToTrailing, relatedView, constant) }
-func bottomToBottom(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToBottom, constant) }
-func bottomToBottom(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToBottom, relatedView, constant) }
-func bottomToTop(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToTop, constant) }
-func bottomToTop(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToTop, relatedView, constant) }
-func bottomToSafeArea(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToSafeArea, constant) }
+public func topToTop(_ constant: CGFloat = 0) -> QuickAnchor { Q(.topToTop, constant) }
+public func topToTop(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.topToTop, relatedView, constant) }
+public func topToSafeArea(_ constant: CGFloat = 0) -> QuickAnchor { Q(.topToSafeArea, constant) }
+public func topToBottom(_ constant: CGFloat = 0) -> QuickAnchor { Q(.topToBottom, constant) }
+public func topToBottom(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.topToBottom, relatedView, constant) }
+public func leadingToLeading(_ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToLeading, constant) }
+public func leadingToLeading(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToLeading, relatedView, constant) }
+public func leadingToTrailing(_ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToTrailing, constant) }
+public func leadingToTrailing(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.leadingToTrailing, relatedView, constant) }
+public func trailingToTrailing(_ constant: CGFloat = 0) -> QuickAnchor { Q(.trailingToTrailing, constant) }
+public func trailingToTrailing(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.trailingToTrailing, relatedView, constant) }
+public func bottomToBottom(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToBottom, constant) }
+public func bottomToBottom(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToBottom, relatedView, constant) }
+public func bottomToTop(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToTop, constant) }
+public func bottomToTop(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToTop, relatedView, constant) }
+public func bottomToSafeArea(_ constant: CGFloat = 0) -> QuickAnchor { Q(.bottomToSafeArea, constant) }
 public func heightToConstant(_ constant: CGFloat = 0) -> QuickAnchor { Q(.heightEqualToConstant, constant) }
-func heightToRelatedView(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.heightEqualToView, relatedView, constant) }
-func widthToConstant(_ constant: CGFloat = 0) -> QuickAnchor { Q(.widthEqualToConstant, constant) }
-func widthToRelatedView(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.widthEqualToView, relatedView, constant) }
-func centerX(_ constant: CGFloat = 0) -> QuickAnchor { Q(.centerX, constant) }
-func centerX(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.centerX, relatedView, constant) }
-func centerY(_ constant: CGFloat = 0) -> QuickAnchor { Q(.centerY, constant) }
-func centerY(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.centerY, relatedView, constant) }
+public func heightToRelatedView(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.heightEqualToView, relatedView, constant) }
+public func widthToConstant(_ constant: CGFloat = 0) -> QuickAnchor { Q(.widthEqualToConstant, constant) }
+public func widthToRelatedView(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.widthEqualToView, relatedView, constant) }
+public func centerX(_ constant: CGFloat = 0) -> QuickAnchor { Q(.centerX, constant) }
+public func centerX(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.centerX, relatedView, constant) }
+public func centerY(_ constant: CGFloat = 0) -> QuickAnchor { Q(.centerY, constant) }
+public func centerY(_ relatedView: UIView, _ constant: CGFloat = 0) -> QuickAnchor { Q(.centerY, relatedView, constant) }
 
 extension UIView {
     
