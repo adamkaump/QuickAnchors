@@ -40,7 +40,6 @@ view.quickAdd(greenView, [
 ## Contents
 * [Explanation](#explanation)
   * [Why Quick Anchors](#why-quick-anchors)
-  * [Installation](#installation)
   * [What is a Quick Anchor](#what-is-a-quick-anchor)
   * [Quick Anchor Types](#quick-anchor-types)
   * [Exchanging Quick Anchors for Constraints](#exchanging-quick-anchors-for-constraints)
@@ -90,10 +89,6 @@ NSLayoutConstraint.activate([
 ```
 
 For this example, Quick Anchors use fewer than half the number of characters than the stock way of creating constraints (441 vs 1,046).
-
-### Installation
-
-Add QuickAnchor.swift file to your project's code base. It's less than 200 lines of code - you don't need a SPM package or a cocoapod or whatever.
 
 ### What is a Quick Anchor
 
